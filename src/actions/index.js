@@ -1,6 +1,7 @@
 // action creators
 import {
-    COLOUR_PICKER
+    COLOUR_PICKER,
+    ANIMATION_PICKER
 } from './types';
 
 
@@ -13,3 +14,9 @@ export const pickColour = (colour) => {
     })
 };
 
+export const selectAnimation = (selection) => {
+    return ({
+        type: ANIMATION_PICKER,
+        payload: selection
+    })
+};

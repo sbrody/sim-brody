@@ -1,4 +1,5 @@
 import { combineReducers } from "redux";
+import animationReducer from "./animationReducer";
 import colourReducer from "./colourReducer";
 
 // const reducers = () => {
@@ -8,5 +9,6 @@ import colourReducer from "./colourReducer";
 // }
 
 export default combineReducers({
-    colour: colourReducer
+    colour: colourReducer,
+    animation: animationReducer
 });

@@ -3,9 +3,9 @@ import { Typography, styled, Container } from '@material-ui/core';
 
 const DemoIntro = () => {
     return (
-        <div>
+        <Container>
             <Typography variant="h3">Some intro text here</Typography>
-        </div>
+        </Container>
     )
 };
 

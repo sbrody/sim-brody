@@ -1,35 +1,40 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Typography, Container, styled, Select, FormControl, InputLabel, MenuItem } from '@material-ui/core';
 import { pickColour } from '../../actions';
 import { connect, useDispatch } from 'react-redux';
 
+const ThemeFormControl = styled(FormControl)({
+    width: '240px',
+    display: 'flex',
+    margin: '2rem auto'
+});
+
 const ColourPicker = (props) => {
     console.log()
     // const [colour, setColour] = useState('');
-    const colour = '';
+
     const dispatch = useDispatch();
 
     const selectColour = (event) => {
         console.log(event.target.value);
         dispatch(pickColour(event.target.value));
-        // setColour(event.target.value);
-        console.log('colour' + props.colour.colour);
     }
 
     return (
         <Container>
-            <FormControl>
+            <ThemeFormControl>
                 <InputLabel id="colour-picker-label">Pick a colour</InputLabel>
                 <Select labelId="colour-picker-label"
                     id="colour-picker"
-                    value={colour}
+                    value={props.colour.colour}
                     onChange={selectColour}
                 >
                     <MenuItem value={'red'}>Red</MenuItem>
                     <MenuItem value={'green'}>Green</MenuItem>
                     <MenuItem value={'blue'}>Blue</MenuItem>
                 </Select>
-            </FormControl>
+            </ThemeFormControl>
+
             Selected colour: {props.colour.colour}
         </Container>
     )

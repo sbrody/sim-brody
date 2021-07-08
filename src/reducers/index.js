@@ -1,6 +1,8 @@
 import { combineReducers } from "redux";
+import animalReducer from "./animalReducer";
 import animationReducer from "./animationReducer";
 import colourReducer from "./colourReducer";
+
 
 // const reducers = () => {
 //     return (
@@ -10,5 +12,6 @@ import colourReducer from "./colourReducer";
 
 export default combineReducers({
     colour: colourReducer,
-    animation: animationReducer
+    animation: animationReducer,
+    animal: animalReducer
 });

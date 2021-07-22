@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Typography, Switch } from '@material-ui/core';
+import { Container, Switch, FormControlLabel } from '@material-ui/core';
 import { selectAnimation } from '../../actions';
 import { connect, useDispatch } from 'react-redux';
 
@@ -13,16 +13,18 @@ const AnimationPicker = (props) => {
     };
 
     return (
-        <Container>
-            <Typography>
-                Do you like animation on a website?
-            </Typography>
-            <Switch
-                checked={props.checked}
-                onChange={handleChange}
-                name="animationCheck"
-                inputProps={{ 'aria-label': 'animation checkbox' }}
-                color="primary"
+        <Container style={{ textAlign: 'center' }}>
+            <FormControlLabel
+                control={
+                    <Switch
+                        checked={props.checked}
+                        onChange={handleChange}
+                        name="animationCheck"
+                        inputProps={{ 'aria-label': 'animation checkbox' }}
+                        color="primary"
+                    />
+                }
+                label="Activate animation"
             />
         </Container>
     )

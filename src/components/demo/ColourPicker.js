@@ -26,7 +26,7 @@ const ColourPicker = (props) => {
                 <InputLabel id="colour-picker-label">Pick a colour</InputLabel>
                 <Select labelId="colour-picker-label"
                     id="colour-picker"
-                    value={props.colour.colour}
+                    value={props.colour.selection}
                     onChange={selectColour}
                 >
                     <MenuItem value={'red'}>Red</MenuItem>
@@ -34,14 +34,12 @@ const ColourPicker = (props) => {
                     <MenuItem value={'blue'}>Blue</MenuItem>
                 </Select>
             </ThemeFormControl>
-
-            Selected colour: {props.colour.colour}
         </Container>
     )
 }
 
 const mapStateToProps = (state) => {
-    console.log(state);
+
     if (state) {
         return { colour: state.colour }
     }

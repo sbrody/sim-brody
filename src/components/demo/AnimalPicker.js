@@ -16,7 +16,7 @@ const AnimalPicker = (props) => {
         return 'Cat';
     }
 
-    console.log(props.animal);
+
     const handleChange = (event) => {
         console.log(event.target.value);
         console.log(props.animal);
@@ -24,9 +24,9 @@ const AnimalPicker = (props) => {
     };
 
     return (
-        <Container>
+        <Container style={{ textAlign: 'center' }}>
             <FormControl component="fieldset">
-                <FormLabel component="legend">Favourite animals</FormLabel>
+                <FormLabel component="legend">Which are your favourite?</FormLabel>
                 <RadioGroup aria-label="favourite animal" name="animal" value={value()} onChange={handleChange}>
                     <FormControlLabel value="Cat" control={<Radio />} label="Cats" />
                     <FormControlLabel value="Dog" control={<Radio />} label="Dogs" />

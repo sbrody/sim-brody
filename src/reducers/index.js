@@ -2,6 +2,7 @@ import { combineReducers } from "redux";
 import animalReducer from "./animalReducer";
 import animationReducer from "./animationReducer";
 import colourReducer from "./colourReducer";
+import pollReducer from "./pollReducer";
 
 
 // const reducers = () => {
@@ -13,5 +14,6 @@ import colourReducer from "./colourReducer";
 export default combineReducers({
     colour: colourReducer,
     animation: animationReducer,
-    animal: animalReducer
+    animal: animalReducer,
+    sector: pollReducer
 });

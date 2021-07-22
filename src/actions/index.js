@@ -3,6 +3,7 @@ import {
     COLOUR_PICKER,
     ANIMATION_PICKER,
     ANIMAL_PICKER,
+    SECTOR_PICKER,
 } from './types';
 import axios from 'axios';
 
@@ -38,4 +39,12 @@ export const selectAnimal = (animal) => {
 
         dispatch({ type: ANIMAL_PICKER, payload: response.data });
     }
-}
+};
+
+export const selectSector = (sector) => {
+    console.log(sector);
+    return ({
+        type: SECTOR_PICKER,
+        payload: sector
+    })
+};

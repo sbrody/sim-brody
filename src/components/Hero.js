@@ -1,7 +1,8 @@
 import React from 'react';
 import { styled, Box, Typography, Container } from '@material-ui/core';
-import Anime, { anime } from 'react-anime';
+import Anime from 'react-anime';
 import dust_texture from './dust_texture.svg';
+import { Animate, AnimateKeyframes } from 'react-simple-animate';
 
 const HeroBox = styled(Box)({
     height: '100vh',
@@ -33,7 +34,7 @@ const HeroBox = styled(Box)({
 
     },
     '& .bg1': {
-        backgroundImage: 'radial-gradient(circle, rgba(204, 214, 235, 0.9) 5%, transparent, transparent)',
+        backgroundImage: 'radial-gradient(circle, rgba(147, 129, 255, 0.9) 5%, transparent, transparent)',
 
     },
     '& .anime0': {
@@ -66,16 +67,19 @@ const Hero = () => {
             </TextContainer>
 
             <div className="bg-outer">
-                <Anime
-                    easing="easeInOutCubic"
-                    duration={15000}
-                    loop={true}
-                    opacity={[0.5, 0.7, 1]}
-                    className='anime'
-
+                <AnimateKeyframes
+                    play
+                    duration={8}
+                    keyframes={[
+                        { 0: 'opacity: 0.2' },
+                        { 50: 'opacity: 0.9' },
+                        { 100: 'opacity: 0.2' }
+                    ]}
+                    iterationCount="infinite"
+                    easeType="ease-in"
                 >
                     <div className="bg-color bg1"></div>
-                </Anime>
+                </AnimateKeyframes>
                 <div className="bg-color bg2"></div>
                 <div className="texture">
 

@@ -1,10 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Container, Card, CardActionArea, CardActions, CardContent, CardMedia, Button, Typography, Link, styled } from '@material-ui/core';
+import { Container, Card, CardActions, CardContent, CardMedia, Button, Typography, Link, styled } from '@material-ui/core';
 import parse from 'html-react-parser';
+import bird from '../../images/bird.jpg';
+import dog from '../../images/dog.jpg';
+import cat from '../../images/tabby.jpg';
 
 const AnimalCard = styled(Card)({
     maxWidth: '400px'
+});
+
+const AnimalCardMedia = styled(CardMedia)({
+    height: '200px'
 });
 
 const AnimalInfo = (props) => {
@@ -13,17 +20,36 @@ const AnimalInfo = (props) => {
         return null;
     }
 
-    // const animalPhoto = () => {
-    //     Photo by < a href = "https://unsplash.com/@ejleusink?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" > Erik - Jan Leusink</a > on < a href = "https://unsplash.com/s/photos/tabby-cat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" > Unsplash</a >
+    const animalPhoto = () => {
+        switch (props.selectedAnimal.query.search[0].title) {
+            case 'Dog':
+                return (
+                    <AnimalCardMedia
+                        image={dog}
+                        title='dog'
+                    />
+                );
+            case 'Bird':
+                return (
+                    <AnimalCardMedia
+                        image={bird}
+                        title='bird'
+                    />
+                );
+            default:
+                return (
+                    <AnimalCardMedia
+                        image={cat}
+                        title='cat'
+                    />
+                );
 
-    //         Photo by < a href = "https://unsplash.com/@marliesebrandsma?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" > Marliese Streefland</a > on < a href = "https://unsplash.com/s/photos/dog?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" > Unsplash</a >
+        }
+    }
 
-    //             Photo by < a href = "https://unsplash.com/@janmeeus?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" > Jan Meeus</a > on < a href = "https://unsplash.com/s/photos/bird?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" > Unsplash</a >
-
-    // }
 
     const itemNumber = () => {
-        console.log(props.selectedAnimal);
+        console.log(props.selectedAnimal.query);
         switch (props.selectedAnimal.query.search[0].title) {
             case 'Dog':
                 return 0;
@@ -32,13 +58,14 @@ const AnimalInfo = (props) => {
                 return 0;
 
             default:
-                return 9;
+                return 2;
         }
     }
 
     return (
         <Container>
             <AnimalCard>
+                {animalPhoto()}
                 <CardContent>
                     <Typography>{parse(props.selectedAnimal.query.search[itemNumber()].snippet)}...</Typography>
                 </CardContent>

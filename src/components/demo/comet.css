@@ -1,0 +1,33 @@
+@keyframes rattle {
+    10%, 90% {
+        transform: rotate(9deg);
+        opacity: 0.9;
+        filter: drop-shadow(1px 1px 1px #000);
+    }
+    20%, 80% {
+        transform: rotate(4deg);
+        opacity: 1;
+        filter: drop-shadow(none);
+    }
+    30%, 50%, 70% {
+        transform: rotate(8deg);
+        opacity: 0.95;
+        filter: drop-shadow(none);
+    }
+    40%, 60% {
+        transform: rotate(-5deg);
+        opacity: 0.85;
+        filter: drop-shadow(1px 1px 1px #970e0e);
+    }
+}
+
+.comet {
+    animation-name: rattle;
+    animation-duration: 3.5s;
+    animation-timing-function: cubic-bezier(.36, .07, .19, .97);
+    animation-direction: alternate;
+    transform: translate(0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    animation-iteration-count: infinite;
+}

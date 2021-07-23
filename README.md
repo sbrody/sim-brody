@@ -1,3 +1,7 @@
+A simple web app built with React and Redux - designed to be my future promotional site.
+The demo component features examples of using Redux to manage state and create interactive experiences.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -28,13 +28,6 @@ export const workData = [
     },
     {
         sector: 'health',
-        title: 'Friends of Homefield Park',
-        url: 'https://friendsofhomefieldpark.co.uk',
-        text: 'Built a local community site in React using a WordPress as a headless content management system',
-        image: homefield
-    },
-    {
-        sector: 'health',
         title: 'Hood & Woolf',
         url: 'https://hoodwoolf.co.uk',
         text: 'Worked with design agency Spitfire Creative to build this striking site for health communication consultancy using a custom WordPress theme',
@@ -88,6 +81,13 @@ export const workData = [
         url: 'https://f10studios.co.uk',
         text: 'I built a cutting-edge site for this Brighton based architectural visualisation studio',
         image: f10
+    },
+    {
+        sector: 'health',
+        title: 'Friends of Homefield Park',
+        url: 'https://friendsofhomefieldpark.co.uk',
+        text: 'Built a local community site in React using a WordPress as a headless content management system',
+        image: homefield
     },
 
 

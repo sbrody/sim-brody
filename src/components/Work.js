@@ -1,10 +1,11 @@
 import React from 'react';
-import { Card, CardActionArea, CardMedia, CardContent, Typography, Container, styled } from '@material-ui/core';
+import { Card, CardActionArea, CardMedia, CardContent, Typography, Container, styled, Grid } from '@material-ui/core';
 import { workData } from './workData';
+
 
 const WorkCard = styled(Card)({
     maxWidth: '350px',
-    margin: '3rem auto'
+    height: '100%'
 });
 
 const WorkCardMedia = styled(CardMedia)({
@@ -18,22 +19,24 @@ const WorkCardContent = styled(CardContent)({
 
 const WorkCardActionArea = styled(CardActionArea)({
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    height: '100%',
+    justifyContent: 'flex-start'
 });
 
-const CardContainer = styled(Container)({
-    display: 'flex',
-    flexWrap: 'wrap'
+const CardGrid = styled(Grid)({
+    justifyContent: 'center'
 });
 
 const ThemeContainer = styled(Container)({
-    margin: '5rem auto',
+    margin: '0 auto',
+    paddingTop: '5rem',
     maxWidth: '760px',
     '& h3': {
         marginBottom: '2rem'
     },
     '& p': {
-        marginBottom: '1rem'
+        marginBottom: '3rem'
     }
 });
 
@@ -41,18 +44,21 @@ const Work = () => {
 
     const mappedData = workData.map((data) => {
         return (
-            <WorkCard key={data.title}>
-                <WorkCardActionArea href={data.url}>
-                    <WorkCardMedia
-                        image={data.image}
-                        title={data.title}
-                    />
-                    <WorkCardContent>
-                        <Typography variant="h5">{data.title}</Typography>
-                        <Typography>{data.text}</Typography>
-                    </WorkCardContent>
-                </WorkCardActionArea>
-            </WorkCard>
+            <Grid key={data.title} item>
+                <WorkCard key={data.title}>
+                    <WorkCardActionArea href={data.url}>
+                        <WorkCardMedia
+                            image={data.image}
+                            title={data.title}
+                        />
+                        <WorkCardContent>
+                            <Typography variant="h5">{data.title}</Typography>
+                            <Typography>{data.text}</Typography>
+                        </WorkCardContent>
+                    </WorkCardActionArea>
+                </WorkCard>
+            </Grid>
+
         )
     })
 
@@ -62,9 +68,9 @@ const Work = () => {
                 <Typography variant="h3">Work</Typography>
                 <Typography>I've been lucky enough to work with some great clients on some really interesting projects. Here are a few of them:</Typography>
             </ThemeContainer>
-            <CardContainer>
+            <CardGrid container spacing={4}>
                 {mappedData}
-            </CardContainer>
+            </CardGrid>
         </Container>
 
 

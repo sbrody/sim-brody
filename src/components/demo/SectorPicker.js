@@ -12,8 +12,6 @@ const SectorPicker = (props) => {
     const dispatch = useDispatch();
 
     const handleChange = (event) => {
-        console.log(event.target.value);
-        console.log(props);
         setSeletedSector(event.target.value);
         dispatch(selectSector(event.target.value));
     };

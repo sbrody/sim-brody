@@ -22,7 +22,7 @@ const SectorChart = (props) => {
     return (
         <BarChart
             width={360}
-            height={320}
+            height={280}
             data={finalArray}
             margin={5}
         >

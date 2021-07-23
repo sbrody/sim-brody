@@ -5,6 +5,9 @@ import { styled, Box } from '@material-ui/core';
 import Menu from './Menu';
 import About from './About';
 import Work from './Work';
+import Contact from './Contact';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import MiniHeader from './MiniHeader';
 
 
 const ThemeBox = styled(Box)({
@@ -27,13 +30,30 @@ const ThemeBox = styled(Box)({
 
 const App = () => {
     return (
-        <ThemeBox>
-            <Menu />
-            <Hero />
-            <Demo />
-            <About />
-            <Work />
-        </ThemeBox>
+        <Router>
+            <ThemeBox>
+                <Menu />
+                <Route path={['/demo', '/about', '/work', '/contact']} component={MiniHeader} />
+                <Switch>
+                    <Route path="/" exact>
+                        <Hero />
+                    </Route>
+                    <Route path="/demo">
+                        <Demo />
+                    </Route>
+                    <Route path="/about">
+                        <About />
+                    </Route>
+                    <Route path="/work">
+                        <Work />
+                    </Route>
+                    <Route path="/contact">
+                        <Contact />
+                    </Route>
+                </Switch>
+            </ThemeBox>
+        </Router>
+
     )
 };
 

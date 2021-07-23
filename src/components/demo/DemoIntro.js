@@ -2,7 +2,6 @@ import React from 'react';
 import { Typography, Container, styled } from '@material-ui/core';
 
 const IntroContainer = styled(Container)({
-    textAlign: 'center',
     marginBottom: '5rem',
     maxWidth: '760px',
     '& h3': {

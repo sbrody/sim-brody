@@ -16,10 +16,10 @@ const Demo = (props) => {
 
     const ThemeContainer = styled(Container)({
         alignItems: 'center',
-        padding: '3rem 0',
+        paddingTop: '5rem',
+        paddingBottom: '5rem',
         position: 'relative',
         width: '100%',
-
     });
 
     const selectedColourRefiner = () => {
@@ -29,7 +29,7 @@ const Demo = (props) => {
             case 'green':
                 return '#c3fdcc';
             case 'blue':
-                return '#d7fff1';
+                return '#E1EDF4';
             default:
                 return '#eee'
         }
@@ -41,7 +41,8 @@ const Demo = (props) => {
         alignItems: 'center',
         border: '1px solid #fff',
         backgroundColor: selectedColourRefiner(),
-        minHeight: '320px'
+        minHeight: '320px',
+        width: '100%'
     });
 
 
@@ -49,17 +50,17 @@ const Demo = (props) => {
         <ThemeContainer>
             <DemoIntro />
             <Grid container spacing={6}>
-                <ThemeGridItem item sm={6}>
+                <ThemeGridItem item lg={6}>
                     <ColourPicker />
                 </ThemeGridItem>
-                <ThemeGridItem item sm={6}>
+                <ThemeGridItem item lg={6}>
                     <AnimationPicker />
                 </ThemeGridItem>
-                <ThemeGridItem item sm={6}>
+                <ThemeGridItem item lg={6}>
                     <AnimalPicker />
                     <AnimalInfo />
                 </ThemeGridItem>
-                <ThemeGridItem item sm={6}>
+                <ThemeGridItem item lg={6}>
                     <SectorPicker />
                     <SectorChart />
                 </ThemeGridItem>

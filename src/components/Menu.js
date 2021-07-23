@@ -6,6 +6,7 @@ import InfoIcon from '@material-ui/icons/Info';
 import CodeIcon from '@material-ui/icons/Code';
 import BuildIcon from '@material-ui/icons/Build';
 import EmailIcon from '@material-ui/icons/Email';
+import { Link } from 'react-router-dom';
 
 const ThemeDrawer = styled(Drawer)({
     padding: '1rem'
@@ -53,11 +54,11 @@ const Menu = () => {
                     }}
                     showLabels
                 >
-                    <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-                    <BottomNavigationAction label="About" icon={<InfoIcon />} />
-                    <BottomNavigationAction label="Work" icon={<CodeIcon />} />
-                    <BottomNavigationAction label="Demo" icon={<BuildIcon />} />
-                    <BottomNavigationAction label="Contact" icon={<EmailIcon />} />
+                    <BottomNavigationAction component={Link} to="/" label="Home" icon={<HomeIcon />} />
+                    <BottomNavigationAction component={Link} to="/about" label="About" icon={<InfoIcon />} />
+                    <BottomNavigationAction component={Link} to="/work" label="Work" icon={<CodeIcon />} />
+                    <BottomNavigationAction component={Link} to="/demo" label="Demo" icon={<BuildIcon />} />
+                    <BottomNavigationAction component={Link} to="/contact" label="Contact" icon={<EmailIcon />} />
                 </ThemeBottomNavigation>
             </Hidden>
             <ThemeDrawer
@@ -66,31 +67,31 @@ const Menu = () => {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}>
                 <List>
-                    <ListItem key='Home'>
+                    <ListItem key='Home' component={Link} to="/" >
                         <ListItemIcon>
                             <HomeIcon />
                         </ListItemIcon>
                         <ListItemText primary="Home" />
                     </ListItem>
-                    <ListItem key='About'>
+                    <ListItem key='About' component={Link} to="/about">
                         <ListItemIcon>
                             <InfoIcon />
                         </ListItemIcon>
                         <ListItemText primary="About" />
                     </ListItem>
-                    <ListItem key='Work'>
+                    <ListItem key='Work' component={Link} to="/work" >
                         <ListItemIcon>
                             <CodeIcon />
                         </ListItemIcon>
                         <ListItemText primary="Work" />
                     </ListItem>
-                    <ListItem key='Demo'>
+                    <ListItem key='Demo' component={Link} to="/demo">
                         <ListItemIcon>
                             <BuildIcon />
                         </ListItemIcon>
                         <ListItemText primary="Demo" />
                     </ListItem>
-                    <ListItem key='Contact'>
+                    <ListItem key='Contact' component={Link} to="/contact">
                         <ListItemIcon>
                             <EmailIcon />
                         </ListItemIcon>

@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.02613aa7.chunk.css",
+    "main.js": "/static/js/main.1aef4aad.chunk.js",
+    "main.js.map": "/static/js/main.1aef4aad.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.7ee84a20.js",
+    "runtime-main.js.map": "/static/js/runtime-main.7ee84a20.js.map",
+    "static/js/2.cdbd42a3.chunk.js": "/static/js/2.cdbd42a3.chunk.js",
+    "static/js/2.cdbd42a3.chunk.js.map": "/static/js/2.cdbd42a3.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.02613aa7.chunk.css.map": "/static/css/main.02613aa7.chunk.css.map",
+    "static/js/2.cdbd42a3.chunk.js.LICENSE.txt": "/static/js/2.cdbd42a3.chunk.js.LICENSE.txt",
+    "static/media/bird.0896881c.jpg": "/static/media/bird.0896881c.jpg",
+    "static/media/comcare.f5b58993.jpg": "/static/media/comcare.f5b58993.jpg",
+    "static/media/comet.bf236368.svg": "/static/media/comet.bf236368.svg",
+    "static/media/dara.488f5dc3.jpg": "/static/media/dara.488f5dc3.jpg",
+    "static/media/dog.62ca2f48.jpg": "/static/media/dog.62ca2f48.jpg",
+    "static/media/dust_texture.66632e24.svg": "/static/media/dust_texture.66632e24.svg",
+    "static/media/f10.b66bdb4f.jpg": "/static/media/f10.b66bdb4f.jpg",
+    "static/media/g2.73bec416.jpg": "/static/media/g2.73bec416.jpg",
+    "static/media/gmhsc.210bbd5a.jpg": "/static/media/gmhsc.210bbd5a.jpg",
+    "static/media/homefield.cd35d043.jpg": "/static/media/homefield.cd35d043.jpg",
+    "static/media/hood.40739ea3.jpg": "/static/media/hood.40739ea3.jpg",
+    "static/media/organic.6bda760f.jpg": "/static/media/organic.6bda760f.jpg",
+    "static/media/sim.0cc80f2e.png": "/static/media/sim.0cc80f2e.png",
+    "static/media/srl.48426aaa.jpg": "/static/media/srl.48426aaa.jpg",
+    "static/media/stoma.578d2abf.jpg": "/static/media/stoma.578d2abf.jpg",
+    "static/media/tabby.12579f9a.jpg": "/static/media/tabby.12579f9a.jpg",
+    "static/media/welland.e72f3e0f.jpg": "/static/media/welland.e72f3e0f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7ee84a20.js",
+    "static/js/2.cdbd42a3.chunk.js",
+    "static/css/main.02613aa7.chunk.css",
+    "static/js/main.1aef4aad.chunk.js"
+  ]
+}

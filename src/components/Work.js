@@ -5,12 +5,13 @@ import { workData } from './workData';
 
 const WorkCard = styled(Card)({
     maxWidth: '350px',
-    height: '100%'
+    height: '100%',
 });
 
 const WorkCardMedia = styled(CardMedia)({
     height: '240px',
-    width: '100%'
+    width: '100%',
+
 });
 
 const WorkCardContent = styled(CardContent)({

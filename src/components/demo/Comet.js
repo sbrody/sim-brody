@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ReactComponent as CometSVG } from '../../images/comet.svg';
 import { Animate } from 'react-simple-animate';
 import { connect } from 'react-redux';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-import { Typography, TextField, Button, Container, styled, FormControl } from '@material-ui/core';
+import { Typography, TextField, Button, Container, styled } from '@material-ui/core';
 
 const Contact = () => {
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Radio, RadioGroup, FormControlLabel, FormControl, FormLabel, Container, Typography } from '@material-ui/core';
+import { Radio, RadioGroup, FormControlLabel, FormControl, FormLabel, Container } from '@material-ui/core';
 import { connect, useDispatch } from 'react-redux';
 import { selectSector } from '../../actions';
 

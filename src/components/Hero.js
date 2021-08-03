@@ -1,8 +1,7 @@
 import React from 'react';
 import { styled, Box, Typography, Container } from '@material-ui/core';
-import Anime from 'react-anime';
 import dust_texture from './dust_texture.svg';
-import { Animate, AnimateKeyframes } from 'react-simple-animate';
+import { AnimateKeyframes } from 'react-simple-animate';
 
 const HeroBox = styled(Box)({
     height: '100vh',

@@ -1,12 +1,16 @@
 import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts';
 import { connect } from 'react-redux';
-
+import { Container, styled } from '@material-ui/core';
 
 
 const SectorChart = (props) => {
 
-    console.log(props.data);
+    const ChartContainer = styled(Container)({
+        '@media (max-width: 1280px)': {
+            minWidth: '50%'
+        }
+    });
 
     // need to turn state object into array of objects to be compatible with recharts
     const sectorData = [];
@@ -20,17 +24,20 @@ const SectorChart = (props) => {
     console.log(finalArray);
 
     return (
-        <BarChart
-            width={360}
-            height={280}
-            data={finalArray}
-            margin={5}
-        >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Bar dataKey="value" fill="#348AA7" />
-        </BarChart>
+        <ChartContainer>
+            <BarChart
+                width={360}
+                height={280}
+                data={finalArray}
+                margin={5}
+            >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Bar dataKey="value" fill="#348AA7" />
+            </BarChart>
+        </ChartContainer>
+
 
     )
 }

@@ -40,7 +40,7 @@ const Menu = () => {
     return (
         <MenuBox>
             <Hidden mdUp>
-                <Button style={{ position: 'fixed', zIndex: '100' }} aria-controls="menu" aria-haspopup="true" onClick={handleClick}>
+                <Button style={{ position: 'fixed', zIndex: '100', right: '1rem' }} aria-controls="menu" aria-haspopup="true" onClick={handleClick}>
                     <IconButton color="primary" aria-label="open menu">
                         <MenuIcon fontSize='large' style={{ color: "#050505" }} />
                     </IconButton>

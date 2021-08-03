@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Container, styled, Select, FormControl, InputLabel, MenuItem } from '@material-ui/core';
+import { Container, styled, Select, FormControl, InputLabel, MenuItem } from '@material-ui/core';
 import { pickColour } from '../../actions';
 import { connect, useDispatch } from 'react-redux';
 

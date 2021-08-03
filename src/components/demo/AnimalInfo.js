@@ -6,6 +6,7 @@ import bird from '../../images/bird.jpg';
 import dog from '../../images/dog.jpg';
 import cat from '../../images/tabby.jpg';
 
+
 const AnimalCard = styled(Card)({
     maxWidth: '400px'
 });
@@ -19,6 +20,7 @@ const AnimalInfo = (props) => {
     if (!props.selectedAnimal) {
         return null;
     }
+
 
     const animalPhoto = () => {
         switch (props.selectedAnimal.query.search[0].title) {
@@ -58,7 +60,7 @@ const AnimalInfo = (props) => {
                 return 0;
 
             default:
-                return 1;
+                return 2;
         }
     }
 

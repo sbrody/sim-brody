@@ -42,7 +42,17 @@ const Demo = (props) => {
         border: '1px solid #fff',
         backgroundColor: selectedColourRefiner(),
         minHeight: '320px',
-        width: '100%'
+        width: '100%',
+        '@media (max-width: 550px)': {
+            flexDirection: 'column',
+            '& >div': {
+                padding: '2rem 0',
+                display: 'flex',
+                justifyContent: 'center'
+            }
+        }
+
+
     });
 
 

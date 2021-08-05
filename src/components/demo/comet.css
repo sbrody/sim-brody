@@ -17,7 +17,6 @@
     40%, 60% {
         transform: rotate(-5deg);
         opacity: 0.85;
-        filter: drop-shadow(1px 1px 1px #970e0e);
     }
 }
 

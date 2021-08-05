@@ -1,51 +1,12 @@
-import React, { useState } from 'react';
-import { ReactComponent as CometSVG } from '../../images/comet.svg';
-import { Animate } from 'react-simple-animate';
+import React from 'react';
 import { connect } from 'react-redux';
-import { styled, Box } from '@material-ui/core';
 import Particles from 'react-tsparticles';
-import './comet.css';
-
-
-const CometBox = styled(Box)({
-    top: '0',
-    left: '0',
-    position: 'absolute',
-    zIndex: '100',
-    textAlign: 'left',
-    '& .comet': {
-        position: 'fixed',
-        left: '-200px',
-        top: '-100px',
-    },
-    '& .rock ': {
-        position: 'fixed',
-        left: '110vw',
-        top: '110vh',
-    }
-});
-
-
 
 
 const Comet = (props) => {
 
-    const [particlesOn, setParticlesOn] = useState(false);
-
-    // useEffect(() => {
-
-    // }, particlesOn) 
-
-    const startParticles = () => {
-        if (props.startComet) {
-            setParticlesOn(true);
-        }
-
-    }
-
-
     const particles = () => {
-        if (particlesOn && props.startComet) {
+        if (props.startComet) {
             return (
                 <Particles
                     id="particles"
@@ -195,36 +156,8 @@ const Comet = (props) => {
         }
     }
 
-    const comet = () => {
-        if (props.startComet) {
-            return <CometSVG />
-        }
-        else return null;
-    }
-
     return (
         <>
-            <CometBox>
-                <Animate
-                    play={props.startComet}
-                    duration={3}
-                    easeType="cubic-bezier(0.32, 0, 0.67, 0)"
-                    start={{
-                        transform: "translate(0, 0)"
-                    }}
-                    end={{
-                        transform: "translate(105vw, 110vh)"
-                    }}
-                    complete={{
-                        display: "none"
-                    }}
-                    onComplete={
-                        startParticles
-                    }
-                >
-                    {comet()}
-                </Animate>
-            </CometBox>
             <div>{particles()}</div>
         </>
     )

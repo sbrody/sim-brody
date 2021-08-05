@@ -58,6 +58,7 @@ const Demo = (props) => {
 
     return (
         <ThemeContainer>
+            <Comet />
             <DemoIntro />
             <Grid container spacing={6}>
                 <ThemeGridItem item lg={6}>
@@ -75,7 +76,6 @@ const Demo = (props) => {
                     <SectorChart />
                 </ThemeGridItem>
             </Grid>
-            <Comet />
         </ThemeContainer>
     )
 }

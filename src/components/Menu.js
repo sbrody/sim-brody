@@ -65,7 +65,8 @@ const Menu = () => {
                 id="menu"
                 anchorEl={anchorEl}
                 open={Boolean(anchorEl)}
-                onClose={handleClose}>
+                onClose={handleClose}
+                onClick={handleClose}>
                 <List>
                     <ListItem key='Home' component={Link} to="/" >
                         <ListItemIcon>

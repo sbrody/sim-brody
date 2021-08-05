@@ -38,7 +38,7 @@ const Menu = (props) => {
     useEffect(() => {
         setValue(pathname);
         dispatch(logoClicked(false));
-    }, [props.payload.ishome])
+    }, [props.payload.ishome, pathname, dispatch])
 
     const handleClick = (event) => {
         console.log(event);

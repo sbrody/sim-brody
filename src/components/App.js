@@ -26,9 +26,12 @@ const ThemeBox = styled(Box)({
         fontWeight: '600'
     }
 
-})
+});
+
+
 
 const App = () => {
+
     return (
         <Router>
             <ThemeBox>

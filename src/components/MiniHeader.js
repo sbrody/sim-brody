@@ -1,8 +1,15 @@
 import React from 'react';
 import { Typography, styled } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+import { connect, useDispatch } from 'react-redux';
+import { logoClicked } from '../actions';
 
+const MiniHeader = (props) => {
 
-const MiniHeader = () => {
+    const dispatch = useDispatch();
+    const handleClick = () => {
+        dispatch(logoClicked(true))
+    };
 
     const HeaderTypography = styled(Typography)({
         position: 'fixed',
@@ -14,7 +21,8 @@ const MiniHeader = () => {
     });
 
     return (
-        <HeaderTypography>Sim</HeaderTypography>
+        <HeaderTypography><Link to="/" onClick={handleClick}>Sim</Link></HeaderTypography>
     )
 };
-export default MiniHeader;
+
+export default connect(logoClicked, {})(MiniHeader);

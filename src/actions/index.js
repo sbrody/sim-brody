@@ -4,13 +4,12 @@ import {
     ANIMATION_PICKER,
     ANIMAL_PICKER,
     SECTOR_PICKER,
+    LOGO_CLICK,
 } from './types';
 import axios from 'axios';
 
 
 export const pickColour = (colour) => {
-
-    console.log('action' + colour);
     return ({
         type: COLOUR_PICKER,
         payload: colour
@@ -48,3 +47,11 @@ export const selectSector = (sector) => {
         payload: sector
     })
 };
+
+export const logoClicked = (clicked) => {
+    return ({
+        type: LOGO_CLICK,
+        payload: clicked
+    })
+        ;
+}

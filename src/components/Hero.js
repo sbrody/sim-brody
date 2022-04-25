@@ -62,8 +62,8 @@ const Hero = () => {
         <HeroBox>
             <TextContainer maxWidth="md">
                 <Typography variant='h1'>Sim Brody</Typography>
-                <Typography variant='h2'>Web apps, React and front-end development for the health sector*</Typography>
-                <Typography>* I sometimes work on other projects too!</Typography>
+                <Typography variant='h2'>Front end development, WordPress and React*</Typography>
+                <Typography>* And other cool stuff to make your web apps fly!</Typography>
             </TextContainer>
 
             <div className="bg-outer">
